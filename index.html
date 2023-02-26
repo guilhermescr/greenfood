@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenFood - Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/image-urls.css" />
+  </head>
+  <body
+    class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed"
+  >
+    <header class="flex justify-around items-center text-white pt-4 pb-4 h-20">
+      <h1 class="text-4xl font-semibold">Green Food</h1>
+
+      <nav>
+        <ul class="flex gap-x-3">
+          <li
+            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+          >
+            <a href="#">Our Menu</a>
+          </li>
+          <li
+            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+          >
+            <a href="#">Find a Subway</a>
+          </li>
+          <li
+            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+          >
+            <a href="#">Rewards & Deals</a>
+          </li>
+          <li
+            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+          >
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        class="border p-2 px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
+      >
+        Log In
+      </button>
+
+      <button>
+        <svg
+          class="fill-orange-400 hover:fill-orange-500 transition-all"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="48" height="48" rx="24" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12 14C11.4492 14 11 14.4492 11 15C11 15.5508 11.4492 16 12 16H14.2188L16.8438 26.5C17.0664 27.3906 17.8633 28 18.7812 28H20C18.3555 28 17 29.3555 17 31C17 32.6445 18.3555 34 20 34C21.6445 34 23 32.6445 23 31C23 29.3555 21.6445 28 20 28H29C27.3555 28 26 29.3555 26 31C26 32.6445 27.3555 34 29 34C30.6445 34 32 32.6445 32 31C32 29.3555 30.6445 28 29 28H30.25C31.1523 28 31.918 27.4023 32.1562 26.5312L34.75 17H18L18.5 19H32.1562L30.25 26H18.7812L16.1562 15.5C15.9336 14.6094 15.1367 14 14.2188 14H12ZM20 30C20.5625 30 21 30.4375 21 31C21 31.5625 20.5625 32 20 32C19.4375 32 19 31.5625 19 31C19 30.4375 19.4375 30 20 30ZM30 31C30 30.4375 29.5625 30 29 30C28.4375 30 28 30.4375 28 31C28 31.5625 28.4375 32 29 32C29.5625 32 30 31.5625 30 31Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section
+        id="green-food-merchandise"
+        class="h-[calc(100vh-5rem)] flex justify-center gap-9 py-20"
+      >
+        <div class="flex flex-col gap-5" id="green-food-merchandise__content">
+          <p class="font-caveat font-bold text-4xl text-orange-300">
+            Green and tasty meals
+          </p>
+          <h2 class="text-5xl font-bold text-white max-w-xs">
+            Here you can find healthy food with low price
+          </h2>
+
+          <div class="bg-white flex p-0.5 rounded-md">
+            <input
+              type="search"
+              placeholder="Search your favorite meal"
+              class="pl-3 max-w-sm w-full"
+            />
+            <button
+              class="bg-orange-400 text-white rounded-md p-2 px-4 hover:bg-orange-500 transition-all"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+        <div id="green-food-merchandise__images">
+          <img class="max-w-lg" src="assets/images/healthy-food.png" alt="Three healthy meals" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
