@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="min-h-screen">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="assets/css/image-urls.css" />
   </head>
   <body
-    class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed"
+    class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed min-h-screen"
   >
-    <header class="flex justify-around items-center text-white pt-4 pb-4 h-20">
-      <h1 class="text-4xl font-semibold">Green Food</h1>
+    <header class="flex justify-around items-center text-white px-4 h-20">
+      <h1 class="text-xl lg:text-4xl font-semibold">Green Food</h1>
 
-      <nav>
+      <nav class="hidden lg:inline-block">
         <ul class="flex gap-x-3">
           <li
             class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
@@ -41,7 +41,7 @@
       </nav>
 
       <button
-        class="border p-2 px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
+        class="border p-2 px-4 lg:p-2 lg:px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
       >
         Log In
       </button>
@@ -65,24 +65,29 @@
       </button>
     </header>
 
-    <main>
+    <main class="lg:min-h-max">
       <section
         id="green-food-merchandise"
-        class="h-[calc(100vh-5rem)] flex justify-center gap-9 py-20"
+        class="h-[calc(100vh-5rem)] flex flex-col lg:flex-row gap-5 lg:gap-0 items-center lg:justify-center px-4 relative"
       >
-        <div class="flex flex-col gap-5" id="green-food-merchandise__content">
-          <p class="font-caveat font-bold text-4xl text-orange-300">
+        <div
+          id="green-food-merchandise__content"
+          class="flex flex-col gap-5 items-center justify-center w-full lg:w-1/2"
+        >
+          <p class="font-caveat font-bold text-4xl text-orange-300 text-center">
             Green and tasty meals
           </p>
-          <h2 class="text-5xl font-bold text-white max-w-xs">
+          <h2
+            class="text-2xl text-center lg:text-start lg:text-5xl font-bold text-white lg:max-w-xs"
+          >
             Here you can find healthy food with low price
           </h2>
 
-          <div class="bg-white flex p-0.5 rounded-md">
+          <div class="bg-white flex p-0.5 rounded-md max-w-xs w-full">
             <input
               type="search"
               placeholder="Search your favorite meal"
-              class="pl-3 max-w-sm w-full"
+              class="pl-3 max-w-sm outline-orange-400 w-full"
             />
             <button
               class="bg-orange-400 text-white rounded-md p-2 px-4 hover:bg-orange-500 transition-all"
@@ -91,8 +96,80 @@
             </button>
           </div>
         </div>
-        <div id="green-food-merchandise__images">
-          <img class="max-w-lg" src="assets/images/healthy-food.png" alt="Three healthy meals" />
+
+        <div
+          id="green-food-merchandise__images"
+          class="w-1/2 lg:max-w-xl w-full"
+        >
+          <img
+            class="max-w-lg mx-auto lg:mx-4 w-full"
+            src="assets/images/healthy-food.png"
+            alt="Three healthy meals"
+          />
+        </div>
+
+        <div
+          id="social-media-buttons"
+          class="absolute bottom-4 left-4 lg:bottom-5 lg:left-14 flex gap-2"
+        >
+          <button class="cursor-pointer">
+            <svg
+              class="fill-orange-400 hover:fill-orange-500 transition-all"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+              />
+              <path
+                d="M21.6667 21.3333H19V24H21.6667V32H25.6667V24H28.0933L28.3333 21.3333H25.6667V20.2227C25.6667 19.5853 25.7947 19.3333 26.4107 19.3333H28.3333V16H25.128C22.7307 16 21.6667 17.056 21.6667 19.0773V21.3333Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+
+          <button class="cursor-pointer">
+            <svg
+              class="fill-orange-400 hover:fill-orange-500 transition-all"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+              />
+              <path
+                d="M32 19.54C31.412 19.8013 30.7787 19.9773 30.1147 20.0573C30.7933 19.6507 31.312 19.008 31.5587 18.2413C30.924 18.6173 30.2213 18.8907 29.4733 19.0373C28.876 18.3987 28.0213 18 27.0787 18C24.9587 18 23.4013 19.9773 23.88 22.0307C21.1533 21.8933 18.7333 20.5867 17.1147 18.6013C16.2547 20.076 16.6693 22.0067 18.1307 22.984C17.5933 22.9667 17.088 22.8187 16.6453 22.5733C16.6093 24.0933 17.7 25.516 19.2787 25.8333C18.8173 25.9587 18.3107 25.988 17.796 25.8893C18.2133 27.1933 19.428 28.1413 20.8627 28.168C19.48 29.2507 17.7427 29.7347 16 29.5293C17.4533 30.4613 19.1773 31.004 21.0307 31.004C27.1267 31.004 30.5693 25.856 30.3613 21.2387C31.004 20.7773 31.56 20.1987 32 19.54Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+
+          <button class="cursor-pointer">
+            <svg
+              class="fill-orange-400 hover:fill-orange-500 transition-all"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M24 16C21.8267 16 21.556 16.0093 20.7013 16.0493C17.7947 16.1827 16.1813 17.7947 16.048 20.7013C16.0093 21.556 16 21.828 16 24C16 26.1733 16.0093 26.4453 16.048 27.2987C16.1813 30.204 17.7947 31.8187 20.7013 31.952C21.556 31.9907 21.8267 32 24 32C26.1733 32 26.4453 31.9907 27.3 31.952C30.2013 31.8187 31.8213 30.2067 31.952 27.2987C31.9907 26.4453 32 26.1733 32 24C32 21.828 31.9907 21.556 31.952 20.7013C31.8213 17.7987 30.2067 16.1813 27.3 16.0493C26.4453 16.0093 26.1733 16 24 16ZM24 17.4427C26.136 17.4427 26.3893 17.4507 27.2333 17.4893C29.4027 17.588 30.4133 18.616 30.5133 20.768C30.5507 21.612 30.5587 21.864 30.5587 24C30.5587 26.136 30.5507 26.3893 30.5133 27.232C30.4133 29.3827 29.404 30.4133 27.2333 30.512C26.3893 30.5493 26.1373 30.5587 24 30.5587C21.864 30.5587 21.6107 30.5507 20.768 30.512C18.5947 30.412 17.588 29.38 17.488 27.232C17.4507 26.3893 17.4413 26.136 17.4413 24C17.4413 21.864 17.4507 21.6107 17.488 20.768C17.5867 18.6147 18.5973 17.5867 20.768 17.488C21.6107 17.4493 21.864 17.4427 24 17.4427ZM19.892 24C19.892 21.7307 21.732 19.892 24 19.892C26.268 19.892 28.108 21.732 28.108 24C28.108 26.2693 26.268 28.108 24 28.108C21.732 28.108 19.892 26.2693 19.892 24ZM24 26.6667C22.5267 26.6667 21.3333 25.4733 21.3333 24C21.3333 22.528 22.5267 21.3333 24 21.3333C25.472 21.3333 26.668 22.5267 26.668 24C26.668 25.4733 25.472 26.6667 24 26.6667ZM27.3093 19.7307C27.3093 19.2 27.74 18.7707 28.2693 18.7707C28.8013 18.7707 29.2307 19.2 29.2307 19.7307C29.2307 20.2613 28.8 20.6907 28.2693 20.6907C27.7387 20.6907 27.3093 20.26 27.3093 19.7307Z"
+                fill="white"
+              />
+            </svg>
+          </button>
         </div>
       </section>
     </main>
