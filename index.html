@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" class="min-h-screen">
+<html lang="en" class="min-h-screen scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GreenFood - Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/scrolls.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/image-urls.css" />
   </head>
   <body
     class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed min-h-screen"
   >
-    <header class="flex justify-around items-center text-white px-4 h-20">
-      <h1 class="text-xl lg:text-4xl font-semibold">
-        <a href="#green-food-merchandise">Green Food</a>
+    <header
+      id="header"
+      class="flex justify-around items-center text-white px-4 h-20 top-0 z-10"
+    >
+      <h1 class="clearUrlItemHandler text-xl lg:text-4xl font-semibold">
+        <a href="#">Green Food</a>
       </h1>
 
       <nav class="hidden lg:inline-block">
         <ul class="flex gap-x-3">
           <li
-            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            class="clearUrlItemHandler cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
           >
             <a href="#">Our Menu</a>
           </li>
           <li
-            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            class="clearUrlItemHandler cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
           >
-            <a href="#">Favorite Meals</a>
+            <a href="#food-categories">Favorite Meals</a>
           </li>
           <li
-            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            class="clearUrlItemHandler cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
           >
-            <a href="#">Rewards & Deals</a>
+            <a href="#dishes">Food & Appetizers</a>
           </li>
           <li
-            class="cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            class="clearUrlItemHandler cursor-pointer p-1 px-2 rounded-md hover:font-medium hover:bg-green-700 hover:underline"
           >
             <a href="#">About Us</a>
           </li>
@@ -177,17 +181,21 @@
         </div>
       </section>
 
-      <section id="food-categories" class="bg-white py-14">
+      <section id="food-categories" class="bg-white px-14 py-14">
         <section
           id="favorite-meals"
-          class="flex flex-col gap-4 items-center justify-center"
+          class="flex flex-col gap-4 items-center justify-center mx-auto max-w-[944px] w-full"
         >
           <p
             class="bg-green-500 text-sm text-white rounded-md py-1 px-3 uppercase"
           >
             Categories
           </p>
-          <h2 class="font-bold text-4xl text-gray-800 mb-4">Favorite Meals</h2>
+          <h2
+            class="font-bold text-center text-gray-800 mb-4 text-3xl sm:text-4xl"
+          >
+            Favorite Meals
+          </h2>
 
           <div
             id="meals"
@@ -196,7 +204,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/pizza.png"
@@ -204,8 +212,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -220,7 +227,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/sushi.png"
@@ -228,8 +235,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -244,7 +250,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/burger.png"
@@ -252,8 +258,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -268,7 +273,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/vegan.png"
@@ -276,8 +281,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -292,7 +296,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/soups.png"
@@ -300,8 +304,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -316,7 +319,7 @@
             <div
               class="meal group cursor-pointer bg-gray-100 rounded-md flex flex-col items-center justify-center max-w-[calc(20rem-5rem)] lg:max-w-max w-full p-4 hover:scale-105 hover:bg-orange-400 transition-all"
             >
-              <div class="meal-icon" class="relative">
+              <div class="meal-icon relative">
                 <img
                   class="h-28 w-28"
                   src="assets/icons/favorite-meals/cakes.png"
@@ -324,8 +327,7 @@
                 />
 
                 <p
-                  class="meal-stock"
-                  class="absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
+                  class="meal-stock absolute top-0 right-0 bg-green-600 opacity-60 group-hover:opacity-100 group-hover:bg-green-500 rounded-full px-2 py-1 text-white"
                 >
                   42
                 </p>
@@ -341,22 +343,24 @@
 
         <section
           id="dishes"
-          class="flex flex-col gap-4 items-center justify-center py-14"
+          class="flex flex-col justify-center py-14 mx-auto max-w-[944px] w-full"
         >
           <p
-            class="bg-green-500 text-sm text-white rounded-md py-1 px-3 uppercase"
+            class="bg-green-500 text-sm text-white rounded-md mb-4 py-1 px-3 uppercase max-w-max"
           >
             Dishes
           </p>
-          <h2 class="font-bold text-4xl text-slate-900 mb-4">
+          <h2 class="font-bold text-slate-900 text-3xl sm:text-4xl">
             Food & Appetizers
           </h2>
 
-          <div class="flex items-center gap-6">
+          <div
+            class="see-more-container flex items-center gap-6 self-end mb-4 lg:mr-6"
+          >
             <p>See more</p>
 
             <div class="flex gap-2">
-              <button>
+              <button id="backItemButton">
                 <svg
                   class="fill-orange-400 hover:fill-orange-500 transition-all"
                   width="48"
@@ -375,7 +379,7 @@
                 </svg>
               </button>
 
-              <button>
+              <button id="nextItemButton">
                 <svg
                   class="fill-orange-400 hover:fill-orange-500 transition-all"
                   width="48"
@@ -396,9 +400,12 @@
             </div>
           </div>
 
-          <div class="food-and-appetizers flex flex-wrap gap-8 justify-center">
+          <div
+            id="food-and-appetizers"
+            class="flex gap-8 scroll-smooth overflow-x-auto overflow-y-hidden w-full"
+          >
             <div
-              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl max-w-[calc(20rem-5rem)] lg:max-w-max w-full hover:scale-105 hover:shadow-md active:opacity-80 transition-all"
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
             >
               <div class="food-and-appetizer__image relative">
                 <div
@@ -441,7 +448,7 @@
             </div>
 
             <div
-              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl max-w-[calc(20rem-5rem)] lg:max-w-max w-full hover:scale-105 hover:shadow-md active:opacity-80 transition-all"
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
             >
               <div class="food-and-appetizer__image relative">
                 <div
@@ -484,7 +491,7 @@
             </div>
 
             <div
-              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl max-w-[calc(20rem-5rem)] lg:max-w-max w-full hover:scale-105 hover:shadow-md active:opacity-80 transition-all"
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
             >
               <div class="food-and-appetizer__image relative">
                 <div
@@ -527,7 +534,136 @@
             </div>
 
             <div
-              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl max-w-[calc(20rem-5rem)] lg:max-w-max w-full hover:scale-105 hover:shadow-md active:opacity-80 transition-all"
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
+            >
+              <div class="food-and-appetizer__image relative">
+                <div
+                  class="absolute bg-orange-400 flex items-center gap-2 left-4 top-4 rounded-md py-2 px-3"
+                >
+                  <svg
+                    class="fill-white w-7"
+                    width="29"
+                    height="27"
+                    viewBox="0 0 29 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5839 2.04124L14.5 0L15.4161 2.04124L18.7015 9.24742L26.7255 10.0825L29 10.3299L27.2941 11.8144L21.3235 17.1031L22.9978 24.8351L23.4717 27L21.4815 25.8866L14.5 21.9278L7.51852 25.8866L5.52832 27L6.00218 24.8351L7.67647 17.1031L1.70588 11.8144L0 10.3299L2.27451 10.0825L10.2985 9.24742L13.5839 2.04124ZM17.0904 10.5773L14.5 4.85567L11.9096 10.5773L11.6569 11.1031L11.0882 11.1649L4.73856 11.8144L9.47712 15.9897L9.91939 16.3918L9.79303 16.9485L8.46623 23.0412L13.9946 19.9485L14.5 19.6392L15.0054 19.9485L20.5338 23.0412L19.207 16.9485L19.0806 16.3918L19.5229 15.9897L24.2614 11.8144L17.9118 11.1649L17.3431 11.1031L17.0904 10.5773Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <p class="text-white">9.8</p>
+                </div>
+
+                <img
+                  class="lg:max-w-[215px] w-full"
+                  src="assets/images/dishes/papaya.png"
+                  alt="Papaya with Coconut"
+                />
+              </div>
+
+              <div class="food-and-appetizer__content p-6">
+                <h3 class="font-bold text-2xl text-gray-800 mb-3">Papaya</h3>
+
+                <div class="flex justify-between">
+                  <p>20-30 min</p>
+                  <p class="text-gray-500">Vegan</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
+            >
+              <div class="food-and-appetizer__image relative">
+                <div
+                  class="absolute bg-orange-400 flex items-center gap-2 left-4 top-4 rounded-md py-2 px-3"
+                >
+                  <svg
+                    class="fill-white w-7"
+                    width="29"
+                    height="27"
+                    viewBox="0 0 29 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5839 2.04124L14.5 0L15.4161 2.04124L18.7015 9.24742L26.7255 10.0825L29 10.3299L27.2941 11.8144L21.3235 17.1031L22.9978 24.8351L23.4717 27L21.4815 25.8866L14.5 21.9278L7.51852 25.8866L5.52832 27L6.00218 24.8351L7.67647 17.1031L1.70588 11.8144L0 10.3299L2.27451 10.0825L10.2985 9.24742L13.5839 2.04124ZM17.0904 10.5773L14.5 4.85567L11.9096 10.5773L11.6569 11.1031L11.0882 11.1649L4.73856 11.8144L9.47712 15.9897L9.91939 16.3918L9.79303 16.9485L8.46623 23.0412L13.9946 19.9485L14.5 19.6392L15.0054 19.9485L20.5338 23.0412L19.207 16.9485L19.0806 16.3918L19.5229 15.9897L24.2614 11.8144L17.9118 11.1649L17.3431 11.1031L17.0904 10.5773Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <p class="text-white">9.8</p>
+                </div>
+
+                <img
+                  class="lg:max-w-[215px] w-full"
+                  src="assets/images/dishes/papaya.png"
+                  alt="Papaya with Coconut"
+                />
+              </div>
+
+              <div class="food-and-appetizer__content p-6">
+                <h3 class="font-bold text-2xl text-gray-800 mb-3">Papaya</h3>
+
+                <div class="flex justify-between">
+                  <p>20-30 min</p>
+                  <p class="text-gray-500">Vegan</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
+            >
+              <div class="food-and-appetizer__image relative">
+                <div
+                  class="absolute bg-orange-400 flex items-center gap-2 left-4 top-4 rounded-md py-2 px-3"
+                >
+                  <svg
+                    class="fill-white w-7"
+                    width="29"
+                    height="27"
+                    viewBox="0 0 29 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.5839 2.04124L14.5 0L15.4161 2.04124L18.7015 9.24742L26.7255 10.0825L29 10.3299L27.2941 11.8144L21.3235 17.1031L22.9978 24.8351L23.4717 27L21.4815 25.8866L14.5 21.9278L7.51852 25.8866L5.52832 27L6.00218 24.8351L7.67647 17.1031L1.70588 11.8144L0 10.3299L2.27451 10.0825L10.2985 9.24742L13.5839 2.04124ZM17.0904 10.5773L14.5 4.85567L11.9096 10.5773L11.6569 11.1031L11.0882 11.1649L4.73856 11.8144L9.47712 15.9897L9.91939 16.3918L9.79303 16.9485L8.46623 23.0412L13.9946 19.9485L14.5 19.6392L15.0054 19.9485L20.5338 23.0412L19.207 16.9485L19.0806 16.3918L19.5229 15.9897L24.2614 11.8144L17.9118 11.1649L17.3431 11.1031L17.0904 10.5773Z"
+                      fill="white"
+                    />
+                  </svg>
+
+                  <p class="text-white">9.8</p>
+                </div>
+
+                <img
+                  class="lg:max-w-[215px] w-full"
+                  src="assets/images/dishes/papaya.png"
+                  alt="Papaya with Coconut"
+                />
+              </div>
+
+              <div class="food-and-appetizer__content p-6">
+                <h3 class="font-bold text-2xl text-gray-800 mb-3">Papaya</h3>
+
+                <div class="flex justify-between">
+                  <p>20-30 min</p>
+                  <p class="text-gray-500">Vegan</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="food-and-appetizer bg-gray-100 cursor-pointer rounded-xl min-w-[205px] hover:scale-95 hover:shadow-md active:opacity-80 transition-all"
             >
               <div class="food-and-appetizer__image relative">
                 <div
@@ -572,5 +708,7 @@
         </section>
       </section>
     </main>
+
+    <script src="assets/js/index.js"></script>
   </body>
 </html>

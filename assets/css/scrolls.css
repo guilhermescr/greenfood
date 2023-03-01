@@ -1,0 +1,14 @@
+#food-and-appetizers::-webkit-scrollbar {
+  height: 14px;
+}
+
+#food-and-appetizers::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+#food-and-appetizers::-webkit-scrollbar-thumb {
+  background-color: #fb923c;
+  border-radius: 20px;
+  border: 1px solid #5f5f5f;
+}
