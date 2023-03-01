@@ -1,17 +1,29 @@
+function reduceURL() {
+  let pathname = location.pathname;
+
+  if (pathname.includes('index')) {
+    pathname = pathname
+      .replace(pathname.slice(pathname.search('index')), '')
+      .trim();
+  }
+
+  history.replaceState(
+    {
+      id: 'Green Food Restaurant',
+      source: 'web'
+    },
+    'Green and Tasty Meals',
+    `${location.origin}${pathname}`
+  );
+}
+
 document.querySelectorAll('.clearUrlItemHandler').forEach(headerNavItem => {
   headerNavItem.addEventListener('click', () => {
-    setTimeout(() => {
-      history.replaceState(
-        {
-          id: 'Green Food Restaurant',
-          source: 'web'
-        },
-        'Green and Tasty Meals',
-        `${location.origin}${location.pathname}`
-      );
-    }, 10);
+    setTimeout(reduceURL, 10);
   });
 });
+
+document.body.onload = reduceURL;
 
 // Sticky Header
 const header = document.getElementById('header');
