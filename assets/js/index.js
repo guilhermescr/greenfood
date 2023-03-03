@@ -23,7 +23,10 @@ document.querySelectorAll('.clearUrlItemHandler').forEach(headerNavItem => {
   });
 });
 
-document.body.onload = reduceURL;
+document.body.onload = () => {
+  reduceURL();
+  switchHeaderPosition();
+};
 
 // Sticky Header
 const header = document.getElementById('header');
