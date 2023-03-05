@@ -48,6 +48,60 @@ function switchHeaderPosition() {
 
 window.onscroll = switchHeaderPosition;
 
+// Hamburger Icon Animation
+const HAMBURGER_ICON = document.querySelector('.open-responsive-navbar-button');
+const RESPONSIVE_MENU = document.querySelector('.responsive-menu');
+const RESPONSIVE_MENU_ASIDE_BAR = document.querySelector(
+  '.responsive-menu__aside-bar'
+);
+const RESPONSIVE_MENU_OPTIONS = document.querySelectorAll(
+  '.responsive-menu__option'
+);
+
+function changeResponsiveMenuAsideBarGradient(windowScrollY) {
+  if (!windowScrollY) {
+    RESPONSIVE_MENU_ASIDE_BAR.classList = `responsive-menu__aside-bar absolute body-img-url bg-center bg-no-repeat bg-cover bg-fixed flex flex-col gap-6 h-full left-[20%] w-[80%] p-4`;
+  } else {
+    RESPONSIVE_MENU_ASIDE_BAR.classList = `responsive-menu__aside-bar absolute bg-gradient-to-b from-green-600 to-lime-500 flex flex-col gap-6 h-full left-[20%] w-[80%] p-4`;
+  }
+}
+
+function toggleHamburgerIcon() {
+  HAMBURGER_ICON.classList.toggle('open');
+
+  changeResponsiveMenuAsideBarGradient(window.scrollY);
+  if (!window.scrollY) {
+    // no gradient
+  } else {
+    // has gradient
+  }
+
+  if (HAMBURGER_ICON.classList.contains('open')) {
+    // open menu
+    document.body.style.overflowY = 'hidden';
+    RESPONSIVE_MENU.classList.remove('hidden');
+  } else {
+    // close menu
+    document.body.style.overflowY = 'auto';
+    RESPONSIVE_MENU.classList.add('hidden');
+  }
+}
+
+HAMBURGER_ICON.addEventListener('click', toggleHamburgerIcon);
+RESPONSIVE_MENU_OPTIONS.forEach(responsive_menu_option => {
+  responsive_menu_option.addEventListener('click', () => {
+    toggleHamburgerIcon();
+  });
+});
+window.addEventListener('resize', () => {
+  if (
+    HAMBURGER_ICON.classList.contains('open') &&
+    document.body.clientWidth >= 1024
+  ) {
+    toggleHamburgerIcon();
+  }
+});
+
 // Food and Appetizers Carousel
 const FOOD_AND_APPETIZERS_CONTAINER = document.getElementById(
   'food-and-appetizers'

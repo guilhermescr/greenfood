@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="assets/css/scrolls.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/image-urls.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/hamburger-menu-icon-animation.css"
+    />
   </head>
   <body
     class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed min-h-screen"
@@ -17,7 +21,9 @@
       <div
         class="header-container flex items-center justify-between text-white h-20 max-w-[1210px] mx-auto w-full px-8 sm:px-14"
       >
-        <h1 class="clearUrlItemHandler text-xl lg:text-4xl font-semibold">
+        <h1
+          class="clearUrlItemHandler responsive-menu__option text-xl lg:text-4xl font-semibold"
+        >
           <a class="block" href="#">Green Food</a>
         </h1>
 
@@ -50,7 +56,7 @@
 
         <div class="flex gap-4 items-center justify-center">
           <button
-            class="border p-2 px-4 lg:p-2 lg:px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
+            class="border hidden lg:inline-block p-2 px-4 lg:p-2 lg:px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
           >
             Log In
           </button>
@@ -72,11 +78,69 @@
               />
             </svg>
           </button>
+
+          <button
+            class="open-responsive-navbar-button flex lg:hidden flex-col gap-2.5 items-center justify-center transition-all h-7 w-10"
+          >
+            <div class="bg-orange-400 h-0.5 w-10 transition-all"></div>
+            <div class="bg-orange-400 h-0.5 w-10 transition-all"></div>
+            <div class="bg-orange-400 h-0.5 w-10 transition-all"></div>
+          </button>
         </div>
       </div>
     </header>
 
-    <main class="lg:min-h-max">
+    <main class="relative lg:min-h-max">
+      <section
+        class="responsive-menu hidden h-[calc(100vh-5rem)] fixed w-full z-10"
+      >
+        <div
+          class="absolute blur-2xl bg-green-600 opacity-60 h-full left-0 w-[20%]"
+        ></div>
+
+        <aside
+          class="responsive-menu__aside-bar absolute bg-center bg-no-repeat bg-cover bg-fixed flex flex-col gap-6 h-full left-[20%] w-[80%] p-8"
+        >
+          <img
+            class="self-center rounded-full max-w-[160px]"
+            src="assets/images/greenfood-logo.jpg"
+            alt="Green Food Logo"
+          />
+
+          <ul
+            class="flex flex-col flex-wrap gap-2 justify-center text-white sm:max-h-[120px]"
+          >
+            <li
+              class="clearUrlItemHandler responsive-menu__option cursor-pointer rounded-md font-medium hover:font-bold hover:bg-green-700 hover:underline max-w-max"
+            >
+              <a class="block p-1 px-2" href="#">Home</a>
+            </li>
+            <li
+              class="clearUrlItemHandler responsive-menu__option cursor-pointer rounded-md font-medium hover:font-bold hover:bg-green-700 hover:underline max-w-max"
+            >
+              <a class="block p-1 px-2" href="#food-categories"
+                >Favorite Meals</a
+              >
+            </li>
+            <li
+              class="clearUrlItemHandler responsive-menu__option cursor-pointer rounded-md font-medium hover:font-bold hover:bg-green-700 hover:underline max-w-max"
+            >
+              <a class="block p-1 px-2" href="#dishes">Food & Appetizers</a>
+            </li>
+            <li
+              class="clearUrlItemHandler responsive-menu__option cursor-pointer rounded-md font-medium hover:font-bold hover:bg-green-700 hover:underline max-w-max"
+            >
+              <a class="block p-1 px-2" href="#our-menu">Our Menu</a>
+            </li>
+            <li
+              class="clearUrlItemHandler responsive-menu__option cursor-pointer rounded-md font-medium hover:font-bold hover:bg-green-700 hover:underline max-w-max"
+            >
+              <a class="block p-1 px-2" href="#about-us">About Us</a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
       <section
         id="green-food-merchandise"
         class="h-[calc(100vh-5rem)] flex flex-col sm:flex-row gap-8 lg:gap-0 items-center justify-center pb-8 lg:pb-0 relative max-w-[1210px] mx-auto w-full px-8 sm:px-14"
@@ -448,7 +512,9 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
                 <h3 class="font-bold text-2xl text-gray-800 mb-3">Papaya</h3>
 
                 <div class="flex justify-between">
@@ -492,7 +558,9 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
                 <h3 class="font-bold text-2xl text-gray-800 mb-3">Burgers</h3>
 
                 <div class="flex justify-between">
@@ -536,7 +604,9 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
                 <h3 class="font-bold text-2xl text-gray-800 mb-3">
                   Cheese Pizza
                 </h3>
@@ -582,8 +652,10 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
-                <h3 class="font-bold text-[23px] text-gray-800 mb-3">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
+                <h3 class="font-bold text-[22px] text-gray-800 mb-3">
                   Japanese Food
                 </h3>
 
@@ -628,7 +700,9 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
                 <h3 class="font-bold text-2xl text-gray-800 mb-3">
                   Vegan Soup
                 </h3>
@@ -669,13 +743,15 @@
 
                 <img
                   class="rounded-t-xl max-h-40 lg:max-w-[215px] w-full"
-                  src="assets/images/dishes/strawberry-cake.jpg"
+                  src="assets/images/dishes/strawberry-cake.png"
                   alt="Strawberry Cake"
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6 pr-5">
-                <h3 class="font-bold text-[22px] text-gray-800 mb-3">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
+                <h3 class="font-bold text-[21px] text-gray-800 mb-3">
                   Strawberry Cake
                 </h3>
 
@@ -720,7 +796,9 @@
                 />
               </div>
 
-              <div class="food-and-appetizer__content p-6">
+              <div
+                class="food-and-appetizer__content flex flex-col justify-between p-6"
+              >
                 <h3 class="font-bold text-2xl text-gray-800 mb-3">Bananas</h3>
 
                 <div class="flex justify-between">
@@ -783,7 +861,7 @@
                 </div>
 
                 <img
-                  class="rounded-t-xl sm:rounded-t-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
+                  class="rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
                   src="assets/images/menu/banana-cake-with-cream-cheese.jpg"
                   alt="Banana Cake with Cream Cheese"
                 />
@@ -835,7 +913,7 @@
                 </div>
 
                 <img
-                  class="rounded-t-xl sm:rounded-t-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
+                  class="rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
                   src="assets/images/menu/watermelon-mojito.jpg"
                   alt="Watermelon Mojito"
                 />
@@ -887,7 +965,7 @@
                 </div>
 
                 <img
-                  class="rounded-t-xl sm:rounded-t-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
+                  class="rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
                   src="assets/images/menu/burger-with-fries.png"
                   alt="Burger with Fries"
                 />
@@ -939,7 +1017,7 @@
                 </div>
 
                 <img
-                  class="rounded-t-xl sm:rounded-t-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
+                  class="rounded-t-xl sm:rounded-tr-none sm:rounded-l-xl h-full w-full sm:h-56 sm:w-60"
                   src="assets/images/menu/california-roll.jpg"
                   alt="Banana Cake with Cream Cheese"
                 />
