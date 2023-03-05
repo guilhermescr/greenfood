@@ -90,7 +90,9 @@ function toggleHamburgerIcon() {
 HAMBURGER_ICON.addEventListener('click', toggleHamburgerIcon);
 RESPONSIVE_MENU_OPTIONS.forEach(responsive_menu_option => {
   responsive_menu_option.addEventListener('click', () => {
-    toggleHamburgerIcon();
+    if (HAMBURGER_ICON.classList.contains('open')) {
+      toggleHamburgerIcon();
+    }
   });
 });
 window.addEventListener('resize', () => {
