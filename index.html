@@ -13,63 +13,66 @@
   <body
     class="bg-lime-500 body-img-url bg-center bg-no-repeat bg-cover bg-fixed min-h-screen"
   >
-    <header
-      id="header"
-      class="flex items-center justify-between text-white h-20 top-0 z-10 max-w-[1210px] mx-auto w-full px-8 sm:px-14"
-    >
-      <h1 class="clearUrlItemHandler text-xl lg:text-4xl font-semibold">
-        <a class="block" href="#">Green Food</a>
-      </h1>
+    <header id="header" class="h-20 top-0 z-10 w-full">
+      <div
+        class="header-container flex items-center justify-between text-white h-20 max-w-[1210px] mx-auto w-full px-8 sm:px-14"
+      >
+        <h1 class="clearUrlItemHandler text-xl lg:text-4xl font-semibold">
+          <a class="block" href="#">Green Food</a>
+        </h1>
 
-      <nav class="hidden lg:inline-block">
-        <ul class="flex gap-x-3">
-          <li
-            class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
-          >
-            <a class="block p-1 px-2" href="#food-categories">Favorite Meals</a>
-          </li>
-          <li
-            class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
-          >
-            <a class="block p-1 px-2" href="#dishes">Food & Appetizers</a>
-          </li>
-          <li
-            class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
-          >
-            <a class="block p-1 px-2" href="#our-menu">Our Menu</a>
-          </li>
-          <li
-            class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
-          >
-            <a class="block p-1 px-2" href="#about-us">About Us</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="hidden lg:inline-block">
+          <ul class="flex gap-x-3">
+            <li
+              class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            >
+              <a class="block p-1 px-2" href="#food-categories"
+                >Favorite Meals</a
+              >
+            </li>
+            <li
+              class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            >
+              <a class="block p-1 px-2" href="#dishes">Food & Appetizers</a>
+            </li>
+            <li
+              class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            >
+              <a class="block p-1 px-2" href="#our-menu">Our Menu</a>
+            </li>
+            <li
+              class="clearUrlItemHandler cursor-pointer rounded-md hover:font-medium hover:bg-green-700 hover:underline"
+            >
+              <a class="block p-1 px-2" href="#about-us">About Us</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="flex gap-4 items-center justify-center">
-        <button
-          class="border p-2 px-4 lg:p-2 lg:px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
-        >
-          Log In
-        </button>
-
-        <button>
-          <svg
-            class="fill-orange-400 hover:fill-orange-500 transition-all"
-            width="48"
-            height="48"
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="flex gap-4 items-center justify-center">
+          <button
+            class="border p-2 px-4 lg:p-2 lg:px-12 font-medium rounded-xl hover:bg-white hover:text-black transition-all"
           >
-            <rect width="48" height="48" rx="24" />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M12 14C11.4492 14 11 14.4492 11 15C11 15.5508 11.4492 16 12 16H14.2188L16.8438 26.5C17.0664 27.3906 17.8633 28 18.7812 28H20C18.3555 28 17 29.3555 17 31C17 32.6445 18.3555 34 20 34C21.6445 34 23 32.6445 23 31C23 29.3555 21.6445 28 20 28H29C27.3555 28 26 29.3555 26 31C26 32.6445 27.3555 34 29 34C30.6445 34 32 32.6445 32 31C32 29.3555 30.6445 28 29 28H30.25C31.1523 28 31.918 27.4023 32.1562 26.5312L34.75 17H18L18.5 19H32.1562L30.25 26H18.7812L16.1562 15.5C15.9336 14.6094 15.1367 14 14.2188 14H12ZM20 30C20.5625 30 21 30.4375 21 31C21 31.5625 20.5625 32 20 32C19.4375 32 19 31.5625 19 31C19 30.4375 19.4375 30 20 30ZM30 31C30 30.4375 29.5625 30 29 30C28.4375 30 28 30.4375 28 31C28 31.5625 28.4375 32 29 32C29.5625 32 30 31.5625 30 31Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+            Log In
+          </button>
+
+          <button>
+            <svg
+              class="fill-orange-400 hover:fill-orange-500 transition-all"
+              width="48"
+              height="48"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="48" height="48" rx="24" />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 14C11.4492 14 11 14.4492 11 15C11 15.5508 11.4492 16 12 16H14.2188L16.8438 26.5C17.0664 27.3906 17.8633 28 18.7812 28H20C18.3555 28 17 29.3555 17 31C17 32.6445 18.3555 34 20 34C21.6445 34 23 32.6445 23 31C23 29.3555 21.6445 28 20 28H29C27.3555 28 26 29.3555 26 31C26 32.6445 27.3555 34 29 34C30.6445 34 32 32.6445 32 31C32 29.3555 30.6445 28 29 28H30.25C31.1523 28 31.918 27.4023 32.1562 26.5312L34.75 17H18L18.5 19H32.1562L30.25 26H18.7812L16.1562 15.5C15.9336 14.6094 15.1367 14 14.2188 14H12ZM20 30C20.5625 30 21 30.4375 21 31C21 31.5625 20.5625 32 20 32C19.4375 32 19 31.5625 19 31C19 30.4375 19.4375 30 20 30ZM30 31C30 30.4375 29.5625 30 29 30C28.4375 30 28 30.4375 28 31C28 31.5625 28.4375 32 29 32C29.5625 32 30 31.5625 30 31Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -842,17 +845,17 @@
       class="bg-zinc-800 text-white flex flex-col gap-8 justify-center w-full px-8 md:px-28 py-8"
     >
       <section
-        class="flex flex-wrap justify-between border-b border-neutral-700"
+        class="flex flex-col md:flex-row md:flex-wrap justify-between border-b border-neutral-700"
       >
         <div
-          class="flex flex-col gap-4 items-center sm:items-start justify-center mx-auto"
+          class="flex flex-col sm:flex-row sm:flex-wrap md:flex-nowrap md:flex-col gap-4 items-center sm:items-start justify-center sm:justify-between md: justify-center mb-4 mx-auto sm:mx-0"
         >
           <p class="font-medium text-lg sm:text-2xl max-w-[300px]">
             The best <strong class="text-green-500">vegan restaurant</strong> in
             the world!
           </p>
           <h3 class="font-medium text-3xl sm:text-5xl">Green Food</h3>
-          <div class="social-media-buttons flex gap-2">
+          <div class="social-media-buttons flex gap-2 sm:ml-auto md:ml-0">
             <button class="cursor-pointer">
               <svg
                 class="fill-orange-400 hover:fill-orange-500 transition-all"
@@ -914,29 +917,31 @@
           </div>
         </div>
 
-        <div class="max-w-sm w-full py-12">
-          <nav class="flex flex-col gap-10">
-            <h4 class="uppercase text-center sm:text-start">Menu</h4>
-            <ul
-              class="flex flex-col flex-wrap gap-2 items-center sm:items-start h-16"
-            >
-              <li class="clearUrlItemHandler max-w-max">
-                <a class="block hover:underline" href="#">Back to Home</a>
-              </li>
-              <li class="clearUrlItemHandler max-w-max">
-                <a class="block hover:underline" href="#food-categories"
-                  >Favorite Meals</a
-                >
-              </li>
-              <li class="clearUrlItemHandler max-w-max">
-                <a class="block hover:underline" href="#our-menu">Our Menu</a>
-              </li>
-              <li class="clearUrlItemHandler max-w-max">
-                <a class="block hover:underline" href="#about-us">About Us</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav
+          class="flex flex-col items-center md:items-end lg:items-start py-12"
+        >
+          <h4 class="uppercase text-center sm:text-start mb-10">Menu</h4>
+          <ul class="grid grid-cols-2 grid-rows-2 sm:gap-x-12 sm:gap-y-4">
+            <li class="clearUrlItemHandler inline-block max-w-max">
+              <a class="inline-block hover:underline" href="#">Back to Home</a>
+            </li>
+            <li class="clearUrlItemHandler inline-block max-w-max ml-auto">
+              <a class="inline-block hover:underline" href="#our-menu"
+                >Our Menu</a
+              >
+            </li>
+            <li class="clearUrlItemHandler inline-block max-w-max">
+              <a class="inline-block hover:underline" href="#food-categories"
+                >Favorite Meals</a
+              >
+            </li>
+            <li class="clearUrlItemHandler inline-block max-w-max ml-auto">
+              <a class="inline-block hover:underline" href="#about-us"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </nav>
 
         <div class="flex flex-col gap-10 py-12 lg:max-w-[250px] w-full">
           <p class="uppercase">Subscribe</p>
